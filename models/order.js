@@ -48,4 +48,3 @@ try {
 }
 
 module.exports = Order;
-

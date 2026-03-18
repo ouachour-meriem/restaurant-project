@@ -6,6 +6,8 @@ dotenv.config();
 
 const orderItemRoutes = require("./routes/orderItemRoutes");
 const paymentRoutes = require("./routes/paymentRoutes");
+const userRoutes = require("./routes/userRoutes");
+const roleRoutes = require("./routes/roleRoutes");
 const customerRoutes = require("./routes/customerRoutes");
 const orderRoutes = require("./routes/orderRoutes");
 const sequelize = require("./config/database");
@@ -23,6 +25,10 @@ app.get("/", (req, res) => {
 // Routes Meriem
 app.use("/order-items", orderItemRoutes);
 app.use("/payments", paymentRoutes);
+
+// Routes Anis
+app.use("/users", userRoutes);
+app.use("/roles", roleRoutes);
 
 // Routes Rayane
 app.use("/customers", customerRoutes);

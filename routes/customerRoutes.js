@@ -15,4 +15,3 @@ router.post("", createCustomer);
 router.post("/", createCustomer);
 
 module.exports = router;
-
