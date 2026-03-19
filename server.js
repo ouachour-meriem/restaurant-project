@@ -8,6 +8,8 @@ const orderItemRoutes = require("./routes/orderItemRoutes");
 const paymentRoutes = require("./routes/paymentRoutes");
 const userRoutes = require("./routes/userRoutes");
 const roleRoutes = require("./routes/roleRoutes");
+const customerRoutes = require("./routes/customerRoutes");
+const orderRoutes = require("./routes/orderRoutes");
 const sequelize = require("./config/database");
 
 const app = express();
@@ -20,11 +22,15 @@ app.get("/", (req, res) => {
   res.send("Restaurant API is running");
 });
 
-// Routes Meriem
+// Routes 
 app.use("/order-items", orderItemRoutes);
 app.use("/payments", paymentRoutes);
 app.use("/users", userRoutes);
 app.use("/roles", roleRoutes);
+
+// Routes Rayane
+app.use("/customers", customerRoutes);
+app.use("/orders", orderRoutes);
 
 sequelize
   .authenticate()
