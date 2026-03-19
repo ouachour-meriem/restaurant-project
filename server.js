@@ -22,9 +22,11 @@ app.get("/", (req, res) => {
   res.send("Restaurant API is running");
 });
 
-// Routes 
+// Routes Meriem
 app.use("/order-items", orderItemRoutes);
 app.use("/payments", paymentRoutes);
+
+// Routes Anis
 app.use("/users", userRoutes);
 app.use("/roles", roleRoutes);
 
